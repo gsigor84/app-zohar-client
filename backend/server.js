@@ -7,6 +7,9 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
+
+
+
 app.use(cors());
 app.use(express.json());
 
@@ -49,7 +52,3 @@ app.listen(port,()=> {
     console.log(`Server is running`);
 })
 
-// create a GET route
-app.get('/express_backend', (req, res) => {
-    res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
-});
