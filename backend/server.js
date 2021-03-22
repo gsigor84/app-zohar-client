@@ -45,11 +45,6 @@ app.use('/eutrendskeys',eutrendskeysRouter);
 app.use('/eutechskeys',eutechskeysRouter);
 app.use('/inwordkeys',inwordkeysRouter);
 
-
-
-
-
-
 app.listen(port,()=> {
     console.log(`Server is running`);
 })
