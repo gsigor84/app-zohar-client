@@ -21,7 +21,7 @@ export default class TechFeed extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/usatechs/')
+        axios.get('https://app-zohar.herokuapp.com/usatechs/')
             .then(res => {
                 if (res.data.length > 0 ) {
                     this.setState({usatechs: res.data})
@@ -32,7 +32,7 @@ export default class TechFeed extends Component {
             console.log(err);
         })
 
-        axios.get('http://localhost:5000/gbtechs/')
+        axios.get('https://app-zohar.herokuapp.com/gbtechs/')
             .then(res => {
                 if (res.data.length > 0 ) {
                     this.setState({gbtechs: res.data})
@@ -43,7 +43,7 @@ export default class TechFeed extends Component {
             console.log(err);
         })
 
-        axios.get('http://localhost:5000/detechs/')
+        axios.get('https://app-zohar.herokuapp.com/detechs/')
             .then(res => {
                 if (res.data.length > 0 ) {
                     this.setState({detechs: res.data})
@@ -54,7 +54,7 @@ export default class TechFeed extends Component {
             console.log(err);
         })
 
-        axios.get('http://localhost:5000/intechs/')
+        axios.get('https://app-zohar.herokuapp.com/intechs/')
             .then(res => {
                 if (res.data.length > 0 ) {
                     this.setState({intechs: res.data})

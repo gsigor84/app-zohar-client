@@ -23,7 +23,7 @@ export default class TopFeed extends Component {
 
 
 
-        axios.get('http://localhost:5000/detechs/')
+        axios.get('https://app-zohar.herokuapp.com/detechs/')
             .then(res => {
                 if (res.data.length > 0 ) {
                     this.setState({detechs: res.data})

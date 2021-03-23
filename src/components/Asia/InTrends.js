@@ -20,7 +20,7 @@ export default class InTrends extends Component {
     }
     componentDidMount() {
 
-        axios.get('http://localhost:5000/intrends/')
+        axios.get('https://app-zohar.herokuapp.com/intrends/')
             .then(res =>{
                 if (res.data.length > 0){
                     this.setState({intrends:res.data})

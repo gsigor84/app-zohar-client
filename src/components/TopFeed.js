@@ -26,7 +26,7 @@ export default class TopFeed extends Component {
 
 
 
-            axios.get('http://localhost:5000/usatrends/')
+            axios.get('https://app-zohar.herokuapp.com/usatrends/')
                 .then(res => {
 
                     if (res.data.length > 0 ) {
@@ -39,7 +39,7 @@ export default class TopFeed extends Component {
             })
 
 
-        axios.get('http://localhost:5000/gbtrends/')
+        axios.get('https://app-zohar.herokuapp.com/gbtrends/')
             .then(res =>{
                 if (res.data.length > 0){
                     this.setState({gbtrends:res.data})
@@ -49,7 +49,7 @@ export default class TopFeed extends Component {
                 }
             }).catch((err)=>{ console.log(err);})
 
-        axios.get('http://localhost:5000/detrends/')
+        axios.get('https://app-zohar.herokuapp.com/detrends/')
             .then(res =>{
                 if (res.data.length > 0){
                     this.setState({detrends:res.data})
@@ -57,7 +57,7 @@ export default class TopFeed extends Component {
                 }
             }).catch((err)=>{ console.log(err);})
 
-        axios.get('http://localhost:5000/intrends/')
+        axios.get('https://app-zohar.herokuapp.com/intrends/')
             .then(res =>{
                 if (res.data.length > 0){
                     this.setState({intrends:res.data})

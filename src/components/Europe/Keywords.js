@@ -21,7 +21,7 @@ export default class Keywords extends Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:5000/eutrendskeys/')
+        axios.get('https://app-zohar.herokuapp.com/eutrendskeys/')
             .then(res => {
 
                 if (res.data.length > 0) {

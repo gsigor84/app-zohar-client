@@ -21,7 +21,7 @@ export default class InTech extends Component {
 
     componentDidMount() {
 
-        axios.get('http://localhost:5000/intechs/')
+        axios.get('https://app-zohar.herokuapp.com/intechs/')
             .then(res => {
                 if (res.data.length > 0) {
                     this.setState({intechs: res.data})

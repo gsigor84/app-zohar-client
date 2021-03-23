@@ -22,7 +22,7 @@ export default class TopFeed extends Component {
     componentDidMount() {
 
 
-        axios.get('http://localhost:5000/usatrends/')
+        axios.get('https://app-zohar.herokuapp.com/usatrends/')
             .then(res => {
 
                 if (res.data.length > 0) {

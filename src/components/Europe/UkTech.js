@@ -22,7 +22,7 @@ export default class TopFeed extends Component {
     componentDidMount() {
 
 
-        axios.get('http://localhost:5000/gbtechs/')
+        axios.get('https://app-zohar.herokuapp.com/gbtechs/')
             .then(res => {
                 if (res.data.length > 0) {
                     this.setState({gbtechs: res.data})
