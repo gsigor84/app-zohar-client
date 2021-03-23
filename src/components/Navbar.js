@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu } from 'antd';
 import {CoffeeOutlined} from '@ant-design/icons';
+import {Link} from 'react-router-dom';
 
 
 
@@ -16,23 +17,25 @@ const Navbar =()=>{
         mode="inline"
     >
                 <SubMenu key="menu" icon={<CoffeeOutlined />} title="Menu">
+
                     <Menu.Item key="home" >
-                        <a href='/' >Home</a>
+                        <Link to={'/'}> Home</Link>
                     </Menu.Item>
                         <Menu.Item key="america" >
-                            <a href='/america'>America</a>
+                          <Link to={'/america'}> America</Link>
                         </Menu.Item>
 
                         <Menu.Item key="europe">
-                            <a href='/europe'>Europe</a>
+                            <Link to={'/europe'}>    Europe</Link>
                         </Menu.Item>
 
 
                         <Menu.Item key="Asia">
-                            <a href='/asia'>Asia</a>
+                            <Link to={'/asia'}>     Asia</Link>
                         </Menu.Item>
                         <Menu.Item key="About">
-                            <a href='/about'>About</a></Menu.Item>
+                            <Link to={'/about'}>    About</Link>
+                </Menu.Item>
 
                 </SubMenu>
 

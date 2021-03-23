@@ -1,114 +1,62 @@
-import React,{Component} from 'react'
-import 'semantic-ui-css/semantic.min.css'
+import React, {Component} from 'react'
+import Navbar from './components/Navbar'
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import Home from './components/Home'
-import NavBar from "./components/Navbar";
 import America from './components/America/America'
-import Route from './components/Route'
-import { Layout} from 'antd';
 import Europe from './components/Europe/Europe'
-import UkTech from "./components/Europe/UkTech";
-import Transition from './components/Transition'
-import UkTrends from "./components/Europe/UkTrends";
-import DeTrends from "./components/Europe/DeTrends";
-import DeTech from './components/Europe/DeTech'
-import UsTrends from "./components/America/UsTrends";
-import UsTech from "./components/America/UsTech";
-import InTrends from "./components/Asia/InTrends";
-import InTech from "./components/Asia/InTech";
-import About from "./components/About"
-
-
-
-
-
-const{Sider,Content}= Layout;
-
+import Asia from './components/Asia/Asia'
+import About from './components/About'
+import { Layout, Menu, Breadcrumb } from 'antd';
+import {   DesktopOutlined,    PieChartOutlined,    FileOutlined,    TeamOutlined,UserOutlined} from '@ant-design/icons';
+import Transition from "./components/Transition";
+const { Header, Content, Footer, Sider } = Layout;
+const { SubMenu } = Menu;
 
 
 export default class App extends Component {
-    constructor(props) {
+    state = {
+        collapsed: false,
+    };
 
-        super(props);
-
-        this.state = {
-            home: 'home',
-            america:'america',
-            europe:'europe',
-            asia:'asia',
-            about:'about'
-
-
-        }
-    }
-
-
+    onCollapse = collapsed => {
+        console.log(collapsed);
+        this.setState({collapsed});
+    };
 
     render() {
+        const {collapsed} = this.state;
         return (
 
-            <Layout style={{background: "white"}}>
-                <div className={"banner"}>
+            <Router>
+            <Layout style={{ minHeight: '100vh' }}>
+                <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
+                    <div className="logo" />
 
-                    <Transition/>
-                </div>
-                <Layout>
-
-                    <Sider style={{background: 'white'}}>
-                        <NavBar/>
-                    </Sider>
-
-                    <Content style={{background: 'white', padding: '0 50px'}}>
-
-                        <Route path="/">
-                            <Home/>
-                        </Route>
-                        <Route path="/america">
-                            <America/>
-                        </Route>
-                        <Route path="/ustrends">
-                            <UsTrends/>
-                        </Route>
-                        <Route path="/ustech">
-                            <UsTech/>
-                        </Route>
-                        <Route path="/europe">
-                            <Europe/>
-                        </Route>
-                        <Route path="/uktrends">
-                            <UkTrends/>
-                        </Route>
-                        <Route path="/detrends">
-                            <DeTrends/>
-                        </Route>
-
-                        <Route path="/uktech">
-                            <UkTech/>
-                        </Route>
-                        <Route path="/detech">
-                            <DeTech/>
-                        </Route>
-                        <Route path="/asia">
-                            <InTrends/>
-                        </Route>
-
-                        <Route path="/intrends">
-                            <InTrends/>
-                        </Route>
-
-                        <Route path="/intech">
-                            <InTech/>
-                        </Route>
-                        <Route path="/about">
-                            <About/>
-                        </Route>
-
+                    <Navbar/>
+                </Sider>
+                <Layout className="site-layout">
+                    <Header className="site-layout-background" style={{ padding: 60 }} >
+                        <Transition/>
+                    </Header>
+                    <Content style={{ margin: '0 16px' }}>
+                        <Breadcrumb style={{ margin: '16px 0' }}>
+                            <Breadcrumb.Item>User</Breadcrumb.Item>
+                            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                        </Breadcrumb>
+                        <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+                    <Switch>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/home" component={America}/>
+                        <Route path="/america" component={America}/>
+                        <Route path="/europe" component={Europe}/>
+                        <Route path="/asia" component={Asia}/>
+                        <Route path="/about" component={About}/>
+                    </Switch>
+                        </div>
                     </Content>
-
                 </Layout>
-
             </Layout>
-
-        );
+            </Router>
+        )
     }
-
 }
