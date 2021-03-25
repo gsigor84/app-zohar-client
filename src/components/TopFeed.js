@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Header} from 'semantic-ui-react'
 import { Row, Col } from 'antd';
 import { List} from 'antd';
-import {FlagOutlined} from "@ant-design/icons";
+import {FlagOutlined,LoadingOutlined} from "@ant-design/icons";
 
 
 export default class TopFeed extends Component {
@@ -194,7 +194,7 @@ const{loading}=this.state;
 
                             </Header.Content>
                         </Header>
-                        {loading ? <div/>: <div className="ui active centered inline loader"></div>}
+                        {loading ? <div/>: <div className="ui active centered inline loader"><LoadingOutlined /></div>}
                         {this.usaTrends()}
                         <h5 className="ui  right aligned  header">
                             <div className="sub header">last update {this.usa_date_update()}</div>
@@ -210,7 +210,7 @@ const{loading}=this.state;
                          <h3>  <Header.Content>Uk Ttrends <FlagOutlined /> </Header.Content></h3>
                         </Header>
 
-                        {loading ? <div/>: <div className="ui active centered inline loader"></div>}
+                        {loading ? <div/>: <div className="ui active centered inline loader"><LoadingOutlined /></div>}
                         {this.gbTrends()}
                         <h5 className="ui  right aligned  header">
                             <div className="sub header">last update {this.gb_date_update()}</div>
@@ -232,7 +232,7 @@ const{loading}=this.state;
                             <h3>  <Header.Content>Germany Trends <FlagOutlined /> </Header.Content></h3>
                         </Header>
 
-                        {loading ? <div/>: <div className="ui active centered inline loader"></div>}
+                        {loading ? <div/>:  <div className="ui active centered inline loader"><LoadingOutlined /></div>}
                         {this.deTrends()}
 
                         <h5 className="ui  right aligned  header">
@@ -248,7 +248,7 @@ const{loading}=this.state;
 
                             <h3>  <Header.Content>Indian Trends <FlagOutlined /> </Header.Content></h3>
                         </Header>
-                        {loading ? <div/>: <div className="ui active centered inline loader"></div>}
+                        {loading ? <div/>:  <div className="ui active centered inline loader"><LoadingOutlined /></div>}
                         {this.inTrends()}
 
                         <h5 className="ui  right aligned  header">

@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Header} from 'semantic-ui-react'
 import {Col, Row} from "antd";
 import { List } from 'antd';
-import {FlagOutlined} from "@ant-design/icons";
+import {FlagOutlined,LoadingOutlined} from "@ant-design/icons";
 
 
 export default class TechFeed extends Component {
@@ -198,7 +198,7 @@ export default class TechFeed extends Component {
 
                             </Header.Content>
                         </Header>
-                        {loading ? <div/>: <div className="ui active centered inline loader"></div>}
+                        {loading ? <div/>: <div className="ui active centered inline loader"><LoadingOutlined /></div>}
                         {this.usaTechs()}
                         <h5 className="ui  right aligned  header">
                             <div className="sub header">last update {this.usa_date_update()}</div>
@@ -213,7 +213,7 @@ export default class TechFeed extends Component {
                                 <h3>  <Header.Content>UK Tech <FlagOutlined /> </Header.Content></h3>
                             </Header>
 
-                            {loading ? <div/>: <div className="ui active centered inline loader"></div>}
+                            {loading ? <div/>:  <div className="ui active centered inline loader"><LoadingOutlined /></div>}
                             {this.gbTechs()}
                             <h5 className="ui  right aligned  header">
                                 <div className="sub header">last update {this.gb_date_update()}</div>
@@ -230,7 +230,7 @@ export default class TechFeed extends Component {
                                 <h3>  <Header.Content>Germany Tech  <FlagOutlined /> </Header.Content></h3>
                             </Header>
 
-                            {loading ? <div/>: <div className="ui active centered inline loader"></div>}
+                            {loading ? <div/>:  <div className="ui active centered inline loader"><LoadingOutlined /></div>}
                             {this.deTechs()}
 
                             <h5 className="ui  right aligned  header">
@@ -246,7 +246,7 @@ export default class TechFeed extends Component {
 
                                 <h3>  <Header.Content>Indian Tech <FlagOutlined /> </Header.Content></h3>
                             </Header>
-                            {loading ? <div/>: <div className="ui active centered inline loader"></div>}
+                            {loading ? <div/>: <div className="ui active centered inline loader"><LoadingOutlined /></div>}
                             {this.inTechs()}
 
                             <h5 className="ui  right aligned  header">

@@ -14,6 +14,7 @@ import Transition from "./components/Transition"
 import { Layout, Menu} from 'antd';
 
 
+
 const { SubMenu } = Menu;
 const { Header, Content, Sider, Footer} = Layout;
 
@@ -27,7 +28,7 @@ function App () {
 
             <Router>
                 <Layout>
-                <Header className="header">
+                <Header className="header"  >
 
 
                         <Transition title={title}/>

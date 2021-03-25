@@ -4,7 +4,7 @@ import { Header} from 'semantic-ui-react'
 import { Flag} from 'semantic-ui-react'
 import {Col, List, Row} from 'antd';
 import KeyWords from "./Keywords";
-import {RightCircleOutlined} from "@ant-design/icons";
+import {LoadingOutlined, RightCircleOutlined} from "@ant-design/icons";
 
 export default class TopFeed extends Component {
 
@@ -83,7 +83,7 @@ export default class TopFeed extends Component {
                             <Header.Content><Flag name='gb'/></Header.Content>
                             </Header>
 
-                            {loading ? <div/>: <div className="ui active centered inline loader"></div>}
+                            {loading ? <div/>: <div className="ui active centered inline loader"><LoadingOutlined /></div>}
                             {this.gbTechs()}
                             <h5 className="ui  right aligned  header">
                                 <div className="sub header">last update {this.gb_date_update2()}</div>
