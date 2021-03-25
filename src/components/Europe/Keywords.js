@@ -34,7 +34,7 @@ export default class Keywords extends Component {
         })
 
 
-        axios.get('http://localhost:5000/eutechskeys/')
+        axios.get('https://app-zohar.herokuapp.com/eutechskeys/')
 
             .then(res => {
 

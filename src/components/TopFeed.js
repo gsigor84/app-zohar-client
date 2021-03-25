@@ -1,9 +1,9 @@
 import React, {Component,} from 'react';
 import axios from 'axios';
 import { Header} from 'semantic-ui-react'
-import { Flag} from 'semantic-ui-react'
 import { Row, Col } from 'antd';
 import { List} from 'antd';
+import {FlagOutlined} from "@ant-design/icons";
 
 
 export default class TopFeed extends Component {
@@ -190,7 +190,7 @@ const{loading}=this.state;
 
                             <Header.Content  >
 
-                                <Flag name='us'/>
+                                <h3>  <Header.Content>USA Trends <FlagOutlined /> </Header.Content></h3>
 
                             </Header.Content>
                         </Header>
@@ -207,7 +207,7 @@ const{loading}=this.state;
                         <div className={'grid_padding'}>
                         <Header as='h4' icon textAlign='right'>
 
-                            <Header.Content><Flag name='gb'/></Header.Content>
+                         <h3>  <Header.Content>Uk Ttrends <FlagOutlined /> </Header.Content></h3>
                         </Header>
 
                         {loading ? <div/>: <div className="ui active centered inline loader"></div>}
@@ -229,7 +229,7 @@ const{loading}=this.state;
                         <div className={'grid_padding'}>
                         <Header as='h4' icon textAlign='right'>
 
-                            <Header.Content><Flag name='de'/></Header.Content>
+                            <h3>  <Header.Content>Germany Trends <FlagOutlined /> </Header.Content></h3>
                         </Header>
 
                         {loading ? <div/>: <div className="ui active centered inline loader"></div>}
@@ -246,7 +246,7 @@ const{loading}=this.state;
                          <div className={'grid_padding'}>
                         <Header as='h4' icon textAlign='right'>
 
-                            <Header.Content><Flag name='in'/></Header.Content>
+                            <h3>  <Header.Content>Indian Trends <FlagOutlined /> </Header.Content></h3>
                         </Header>
                         {loading ? <div/>: <div className="ui active centered inline loader"></div>}
                         {this.inTrends()}

@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {Flag, Header} from 'semantic-ui-react'
+import {Header} from 'semantic-ui-react'
 import {Col, Row} from "antd";
 import { List } from 'antd';
+import {FlagOutlined} from "@ant-design/icons";
 
 
 export default class TechFeed extends Component {
@@ -193,7 +194,7 @@ export default class TechFeed extends Component {
 
                             <Header.Content  >
 
-                                <Flag name='us'/>
+                                <h3>  <Header.Content>USA Tech <FlagOutlined /> </Header.Content></h3>
 
                             </Header.Content>
                         </Header>
@@ -209,7 +210,7 @@ export default class TechFeed extends Component {
                         <div className={'grid_padding'}>
                             <Header as='h4' icon textAlign='right'>
 
-                                <Header.Content><Flag name='gb'/></Header.Content>
+                                <h3>  <Header.Content>UK Tech <FlagOutlined /> </Header.Content></h3>
                             </Header>
 
                             {loading ? <div/>: <div className="ui active centered inline loader"></div>}
@@ -226,7 +227,7 @@ export default class TechFeed extends Component {
                         <div className={'grid_padding'}>
                             <Header as='h4' icon textAlign='right'>
 
-                                <Header.Content><Flag name='de'/></Header.Content>
+                                <h3>  <Header.Content>Germany Tech  <FlagOutlined /> </Header.Content></h3>
                             </Header>
 
                             {loading ? <div/>: <div className="ui active centered inline loader"></div>}
@@ -243,7 +244,7 @@ export default class TechFeed extends Component {
                         <div className={'grid_padding'}>
                             <Header as='h4' icon textAlign='right'>
 
-                                <Header.Content><Flag name='in'/></Header.Content>
+                                <h3>  <Header.Content>Indian Tech <FlagOutlined /> </Header.Content></h3>
                             </Header>
                             {loading ? <div/>: <div className="ui active centered inline loader"></div>}
                             {this.inTechs()}

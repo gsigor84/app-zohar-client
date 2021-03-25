@@ -145,3 +145,35 @@ padding: 50px;
 
   padding: 10px;
 }
+
+.logo {
+  float: left;
+  width: 120px;
+  height: 10px;
+
+  background: #fff;
+}
+
+.ant-layout-header{
+  height: 180px;
+  background-position: 50% 50%;
+  background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80');
+  filter: grayscale(80%);
+}
+
+.site-layout-background {
+  background: #fff;
+}
+.h3{
+    text-align: justify;
+    text-justify: inter-word;
+}
+.arrow{
+  padding:2%;
+  float: left;
+}
+.title{
+  margin: auto;
+  padding:2%;
+
+}

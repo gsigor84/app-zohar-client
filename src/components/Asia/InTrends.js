@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Header} from 'semantic-ui-react'
 import { Flag} from 'semantic-ui-react'
 import {Col, List, Row} from 'antd';
-import Breadcrumbs from "../Asia/Breadcrumbs";
 import KeyWords from "./KeyWords";
+import {RightCircleOutlined} from "@ant-design/icons";
 
 export default class InTrends extends Component {
 
@@ -40,7 +40,17 @@ export default class InTrends extends Component {
                     <List.Item key={item._id}>
                         <List.Item.Meta
 
-                            title={<a href={item.link}>{item.title}</a>}
+                            title={<a href={item.link}>
+
+                                <h3>
+                                    <div className={'arrow'}>
+                                        <RightCircleOutlined />
+                                    </div>
+                                    <div className={'title'}>
+                                        {item.title}
+                                    </div>
+                                </h3>
+                            </a>}
 
                         />
                     </List.Item>
@@ -61,7 +71,7 @@ export default class InTrends extends Component {
         const {loading} = this.state;
         return (
             <div className={'container_news_padding'}>
-                <Breadcrumbs/>
+
             <Row>
 
             <Col span={12}>
