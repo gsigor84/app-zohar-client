@@ -1,7 +1,6 @@
 import React, {useState}from 'react'
 import {Button} from "antd";
 import {MenuUnfoldOutlined} from "@ant-design/icons";
-import { Menu, ActivityIndicator, NavBar } from 'antd-mobile';
 
 const state = {
     size: 'large',
@@ -45,11 +44,7 @@ let menu
     </Button>
     {menu}
 
-
-
                 </div>
-
-
 
         )
   

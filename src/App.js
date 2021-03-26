@@ -18,10 +18,6 @@ import { Layout, Menu} from 'antd';
 const { SubMenu } = Menu;
 const { Header, Content, Sider, Footer} = Layout;
 
-const state = {
-    size: 'large',
-};
-
 
 function App () {
 
