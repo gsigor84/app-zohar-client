@@ -42,7 +42,7 @@ export default class InTrends extends Component {
 
                             title={<a href={item.link}>
 
-                                <h3>
+                                <h3 className={'title-news'}>
                                     <div className={'arrow'}>
                                         <RightCircleOutlined />
                                     </div>
