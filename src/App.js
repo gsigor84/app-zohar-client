@@ -11,16 +11,21 @@ import InTrends from './components/Asia/InTrends'
 import InTech from './components/Asia/InTech'
 import About from './components/About'
 import Transition from "./components/Transition"
+import Burger from './components/Burger'
 import { Layout, Menu} from 'antd';
-
 
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider, Footer} = Layout;
 
+const state = {
+    size: 'large',
+};
 
 
 function App () {
+
+
 
     const[title,setTitle]=useState('Zohar')
 
@@ -28,11 +33,11 @@ function App () {
 
             <Router>
                 <Layout>
+
+                    <Burger />
                 <Header className="header"  >
 
-
                         <Transition title={title}/>
-
 
                 </Header>
 
@@ -125,7 +130,7 @@ function App () {
                 </Content>
                         </Layout>
 
-                    <Footer style={{ textAlign: 'center' }}>gsigor84@gmail.com ©2021 Created by Igor Silva</Footer>
+                    <Footer className={'footer'} style={{ textAlign: 'center' }}>©2021 Created by Igor Silva</Footer>
             </Layout>  </Router>
         )
     }

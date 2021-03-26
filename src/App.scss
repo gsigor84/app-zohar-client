@@ -92,14 +92,6 @@ ul {
   padding:2%;
 }
 
-.banner{
-  height:300px; /* or whatever width you want. */
-  max-height:300px; /* or whatever width you want. */
-  display: inline-block;
-  opacity: 0.7;
-  background-image: url('https://images.unsplash.com/photo-1454117096348-e4abbeba002c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-
-}
 
 .simple-trans-main > div {
 
@@ -118,11 +110,6 @@ ul {
 
 }
 
-.p_banner{
-  opacity: 0.9;
-}
-
-
 .grid_padding{
   padding: 5%;
 
@@ -133,6 +120,11 @@ padding: 50px;
 
 .news_padding{
   padding: 5px;
+  display: block;
+}
+.ant-row{
+  display: block;
+  width: 750px;
 }
 
 .key_padding{
@@ -145,17 +137,8 @@ padding: 50px;
 
   padding: 10px;
 }
-
-.logo {
-  float: left;
-  width: 120px;
-  height: 10px;
-
-  background: #fff;
-}
-
 .ant-layout-header{
-  height: 180px;
+  height: 178px;
   background-position: center;
   background-image: url(banner.jpg);
 
@@ -175,5 +158,60 @@ padding: 50px;
 .title{
   margin: auto;
   padding:2%;
+
+}
+.menu{
+  display: none;
+}
+.burger{
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .ant-layout-sider{
+
+    display: none;
+  }
+  .ant-layout-header{
+    display: none;
+
+  }
+  .nav-bar{
+    float: left;
+    display: block;
+    transition: 850ms;
+
+  }
+  .nav-bar.active{
+    transition: 350ms;
+    left:0;
+  }
+.nav-item{
+  padding: 10%;
+  width:400px;
+}
+.burger{
+  display: block;
+  background-color: white;
+}
+  .nav-menu{
+
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 5px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+
+  }
+
+.nav-link{
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+
+}
+
+
 
 }

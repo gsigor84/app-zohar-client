@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "antd": "^4.14.0",
+    "antd-mobile": "^2.3.4",
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "moment": "^2.29.1",
@@ -29,7 +30,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-
   "eslintConfig": {
     "extends": [
       "react-app",

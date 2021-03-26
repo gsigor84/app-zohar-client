@@ -10,9 +10,8 @@ function Transition(props) {
         return transitions.map(({item, props, key}) =>
             <animated.div key={key} style={props}>
 
-                < p> {title}<CoffeeOutlined/>News
+                < p className={'transition'}> {title}<CoffeeOutlined/>News</p>
 
-                </p>
                 {item.text}
 
 
@@ -25,15 +24,15 @@ function Transition(props) {
     const [items] = useState([''])
     const transitions = useTransition(items, item => item.key, {
         from: {transform: 'translate3d(0,-10px,0)'},
-        enter: {transform: 'translate3d(0,70px,0)'},
+        enter: {transform: 'translate3d(0,40px,0)'},
         leave: {transform: 'translate3d(0,-40px,0)'},
     })
 
 
         return (
             <div className={'simple-trans-main'}>
-                <div>
 
+                <div>
                     {renderHome()}
                 </div>
             </div>
